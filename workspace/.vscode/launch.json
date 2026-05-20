@@ -1,0 +1,368 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+
+
+        // ============================================
+        // sandbox（ライブラリ不要の練習用）
+        // ============================================
+        {
+            "name": "sandbox をデバッグ",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/sandbox/app.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/sandbox",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "miDebuggerPath": "${workspaceFolder}/../mingw64/bin/gdb.exe",
+            "setupCommands": [
+                {
+                    "description": "gdb の pretty-printing を有効化",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "sandbox をビルド"
+        },
+
+        // ============================================
+        // 01. HTTP通信
+        // ============================================
+        {
+            "name": "01: HTTP通信をデバッグ",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/projects/01_http/http_app.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/projects/01_http",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "miDebuggerPath": "${workspaceFolder}/../mingw64/bin/gdb.exe",
+            "setupCommands": [
+                {
+                    "description": "gdb の pretty-printing を有効化",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "01: HTTP通信をビルド"
+        },
+
+        // ============================================
+        // 02. 圧縮・展開
+        // ============================================
+        {
+            "name": "02: 圧縮・展開をデバッグ",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/projects/02_compress/compress_app.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/projects/02_compress",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "miDebuggerPath": "${workspaceFolder}/../mingw64/bin/gdb.exe",
+            "setupCommands": [
+                {
+                    "description": "gdb の pretty-printing を有効化",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "02: 圧縮・展開をビルド"
+        },
+
+        // ============================================
+        // 03. PNG画像処理
+        // ============================================
+        {
+            "name": "03: PNG画像処理をデバッグ",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/projects/03_png/png_app.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/projects/03_png",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "miDebuggerPath": "${workspaceFolder}/../mingw64/bin/gdb.exe",
+            "setupCommands": [
+                {
+                    "description": "gdb の pretty-printing を有効化",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "03: PNG画像処理をビルド"
+        },
+
+        // ============================================
+        // 04. データベース
+        // ============================================
+        {
+            "name": "04: データベースをデバッグ",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/projects/04_database/db_app.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/projects/04_database",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "miDebuggerPath": "${workspaceFolder}/../mingw64/bin/gdb.exe",
+            "setupCommands": [
+                {
+                    "description": "gdb の pretty-printing を有効化",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "04: データベースをビルド"
+        },
+
+        // ============================================
+        // 05. 図形描画
+        // ============================================
+        {
+            "name": "05: 図形描画をデバッグ",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/projects/05_graphics/graphics_app.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/projects/05_graphics",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "${workspaceFolder}/../mingw64/bin/gdb.exe",
+            "setupCommands": [
+                {
+                    "description": "gdb の pretty-printing を有効化",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "05: 図形描画をビルド"
+        },
+
+        // ============================================
+        // 06. 暗号処理
+        // ============================================
+        {
+            "name": "06: 暗号処理をデバッグ",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/projects/06_crypto/crypto_app.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/projects/06_crypto",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "miDebuggerPath": "${workspaceFolder}/../mingw64/bin/gdb.exe",
+            "setupCommands": [
+                {
+                    "description": "gdb の pretty-printing を有効化",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "06: 暗号処理をビルド"
+        },
+
+        // ============================================
+        // 07. 数学計算
+        // ============================================
+        {
+            "name": "07: 数学計算をデバッグ",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/projects/07_math/math_app.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/projects/07_math",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "miDebuggerPath": "${workspaceFolder}/../mingw64/bin/gdb.exe",
+            "setupCommands": [
+                {
+                    "description": "gdb の pretty-printing を有効化",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "07: 数学計算をビルド"
+        },
+
+        // ============================================
+        // 08. シューティングゲーム
+        // ============================================
+        {
+            "name": "08: シューティングゲームをデバッグ",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/projects/08_game/game.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/projects/08_game",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "${workspaceFolder}/../mingw64/bin/gdb.exe",
+            "setupCommands": [
+                {
+                    "description": "gdb の pretty-printing を有効化",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "08: シューティングゲームをビルド"
+        },
+
+        // ============================================
+        // 汎用デバッグ
+        // ============================================
+        {
+            "name": "現在のファイルをビルド",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "C:/Windows/System32/cmd.exe",
+            "args": [
+                "/c",
+                "exit",
+                "0"
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "${workspaceFolder}/../mingw64/bin/gdb.exe",
+            "setupCommands": [
+                {
+                    "description": "gdb の pretty-printing を有効化",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "noDebug": true,
+            "preLaunchTask": "現在のファイルをビルド（シンプル）"
+        },
+        {
+            "name": "現在のファイルを実行",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${fileDirname}/${fileBasenameNoExtension}.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "miDebuggerPath": "${workspaceFolder}/../mingw64/bin/gdb.exe",
+            "setupCommands": [
+                {
+                    "description": "gdb の pretty-printing を有効化",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "noDebug": true,
+            "preLaunchTask": "現在のファイルをビルド（シンプル）"
+        },
+        {
+            "name": "現在のフォルダを実行",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${fileDirname}/app.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "miDebuggerPath": "${workspaceFolder}/../mingw64/bin/gdb.exe",
+            "setupCommands": [
+                {
+                    "description": "gdb の pretty-printing を有効化",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "noDebug": true,
+            "preLaunchTask": "現在のフォルダをビルド（シンプル）"
+        },
+        {
+            "name": "現在のファイルをデバッグ",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${fileDirname}/${fileBasenameNoExtension}.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "miDebuggerPath": "${workspaceFolder}/../mingw64/bin/gdb.exe",
+            "setupCommands": [
+                {
+                    "description": "gdb の pretty-printing を有効化",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "現在のファイルをビルド（シンプル）"
+        },
+        {
+            "name": "現在のフォルダをデバッグ",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${fileDirname}/app.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "miDebuggerPath": "${workspaceFolder}/../mingw64/bin/gdb.exe",
+            "setupCommands": [
+                {
+                    "description": "gdb の pretty-printing を有効化",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "現在のフォルダをビルド（シンプル）"
+        },
+        {
+            "name": "現在のファイルをデバッグ（raylib付き）",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${fileDirname}/${fileBasenameNoExtension}.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "miDebuggerPath": "${workspaceFolder}/../mingw64/bin/gdb.exe",
+            "setupCommands": [
+                {
+                    "description": "gdb の pretty-printing を有効化",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "現在のファイルをビルド（raylib付き）"
+        }
+    ]
+}

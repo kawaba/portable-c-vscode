@@ -1,0 +1,109 @@
+{
+    // ============================================
+    // エディタ基本設定
+    // ============================================
+    "editor.fontSize": 14,
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "editor.formatOnSave": false,
+    "editor.minimap.enabled": false,
+    "editor.wordWrap": "on",
+    "editor.renderWhitespace": "selection",
+
+    // ============================================
+    // ファイル設定
+    // ============================================
+    "files.encoding": "utf8",
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 1000,
+    "files.associations": {
+        "*.h": "c",
+        "*.c": "c"
+    },
+    "files.trimTrailingWhitespace": true,
+
+    // ============================================
+    // C/C++ 拡張機能設定
+    // ============================================
+    "C_Cpp.default.compilerPath": "${workspaceFolder}/../mingw64/bin/gcc.exe",
+    "C_Cpp.default.cStandard": "c17",
+    "C_Cpp.default.intelliSenseMode": "windows-gcc-x64",
+    "C_Cpp.errorSquiggles": "enabled",
+    "C_Cpp.debugShortcut": true,
+
+    // ============================================
+    // ターミナル設定
+    // ============================================
+    "terminal.integrated.defaultProfile.windows": "Command Prompt",
+    "terminal.integrated.fontSize": 13,
+
+    // ============================================
+    // GitHub Copilot 設定
+    // ============================================
+    "github.copilot.enable": {
+        "*": true,
+        "c": true,
+        "markdown": true,
+        "plaintext": true
+    },
+    "github.copilot.editor.enableAutoCompletions": true,
+
+    // ============================================
+    // 表示設定（講習向け）
+    // ============================================
+    "workbench.colorTheme": "Default Light+",
+    "workbench.startupEditor": "none",
+    "window.zoomLevel": 0,
+
+    // ============================================
+    // エクスプローラー設定
+    // ============================================
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+
+    // ============================================
+    // 除外設定
+    // ============================================
+    "files.exclude": {
+        "**/*.exe": false,
+        "**/*.o": true,
+        "**/*.obj": true
+    },
+
+    // ============================================
+    // 検索除外
+    // ============================================
+    "search.exclude": {
+        "**/include/sqlite3.c": true,
+        "**/lib": true
+    },
+
+    // ============================================
+    // Code Spell Checker 辞書
+    // ============================================
+    "cSpell.enabled": false,
+    "cSpell.checkIdentifiers": false,
+    "cSpell.words": [
+        "WINHTTP_NO_REFERER",
+        "referer"
+    ],
+
+    // ============================================
+    // Markdown 設定（Markdown All in One向け）
+    // ============================================
+    "[markdown]": {
+        "editor.wordWrap": "on",
+        "editor.quickSuggestions": {
+            "comments": "on",
+            "strings": "on",
+            "other": "on"
+        }
+    },
+    "markdown.extension.toc.updateOnSave": true,
+    "markdown.extension.toc.levels": "2..4",
+    "markdown.extension.orderedList.autoRenumber": true,
+    "markdown.extension.list.indentationSize": 2,
+    "markdown.extension.print.absoluteImgPath": false,
+    "markdown.validate.enabled": true
+
+}

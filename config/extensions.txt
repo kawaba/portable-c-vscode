@@ -1,0 +1,31 @@
+# ============================================================
+# VS Code 拡張機能リスト（C言語開発用）
+# ============================================================
+
+# --- C/C++ 開発 ---
+ms-vscode.cpptools
+ms-vscode.cpptools-extension-pack
+ms-vscode.cmake-tools
+
+# --- AI支援 ---
+github.copilot
+github.copilot-chat
+
+# --- デバッグ支援 ---
+webfreak.debug
+
+# --- コード整形・品質 ---
+xaver.clang-format
+esbenp.prettier-vscode
+
+# --- 日本語化 ---
+ms-ceintl.vscode-language-pack-ja
+
+# --- Git連携 ---
+github.vscode-github-actions
+github.remotehub
+ms-vscode.remote-repositories
+
+# --- その他便利機能 ---
+streetsidesoftware.code-spell-checker
+mhutchie.git-graph

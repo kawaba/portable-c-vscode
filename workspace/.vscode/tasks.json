@@ -1,0 +1,319 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        // ============================================
+        // sandbox（ライブラリ不要の練習用）
+        // ============================================
+        {
+            "label": "sandbox をビルド",
+            "type": "shell",
+            "command": "${workspaceFolder}/../mingw64/bin/gcc",
+            "args": [
+                "-g",
+                "-fexec-charset=CP932",
+                "-o",
+				"${workspaceFolder}/projects/sandbox/app.exe",
+                "${workspaceFolder}/projects/sandbox/csv.c",
+				"${workspaceFolder}/include/input.c",
+				"-I${workspaceFolder}/include"
+            ],
+            "group": "build",
+            "problemMatcher": ["$gcc"],
+            "detail": "sandbox/csv.c をビルド（ライブラリなし）"
+        },
+
+        // ============================================
+        // 01. HTTP通信（WinHTTP使用）
+        // ============================================
+        {
+            "label": "01: HTTP通信をビルド",
+            "type": "shell",
+            "command": "${workspaceFolder}/../mingw64/bin/gcc",
+            "args": [
+                "-g",
+                "-fexec-charset=CP932",
+                "-o",
+                "${workspaceFolder}/projects/01_http/http_app.exe",
+                "${workspaceFolder}/projects/01_http/*.c",
+				"${workspaceFolder}/include/input.c",
+                "-I${workspaceFolder}/include",
+                "-lwinhttp"
+            ],
+            "group": "build",
+            "problemMatcher": ["$gcc"],
+            "detail": "WinHTTPを使用したHTTP通信アプリ"
+        },
+
+        // ============================================
+        // 02. 圧縮・展開（miniz使用）
+        // ============================================
+        {
+            "label": "02: 圧縮・展開をビルド",
+            "type": "shell",
+            "command": "${workspaceFolder}/../mingw64/bin/gcc",
+            "args": [
+                "-g",
+                "-fexec-charset=CP932",
+                "-o",
+                "${workspaceFolder}/projects/02_compress/compress_app.exe",
+                "${workspaceFolder}/projects/02_compress/*.c",
+				"${workspaceFolder}/include/input.c",
+                "-I${workspaceFolder}/include"
+            ],
+            "group": "build",
+            "problemMatcher": ["$gcc"],
+            "detail": "minizを使用した圧縮・展開アプリ"
+        },
+
+        // ============================================
+        // 03. PNG画像サイズ計算（stb_image使用）
+        // ============================================
+        {
+            "label": "03: PNG画像処理をビルド",
+            "type": "shell",
+            "command": "${workspaceFolder}/../mingw64/bin/gcc",
+            "args": [
+                "-g",
+                "-fexec-charset=CP932",
+                "-o",
+                "${workspaceFolder}/projects/03_png/png_app.exe",
+                "${workspaceFolder}/projects/03_png/*.c",
+				"${workspaceFolder}/include/input.c",
+                "-I${workspaceFolder}/include",
+                "-lm"
+            ],
+            "group": "build",
+            "problemMatcher": ["$gcc"],
+            "detail": "stb_imageを使用したPNG画像処理アプリ"
+        },
+
+        // ============================================
+        // 04. データベース操作（SQLite使用）
+        // ============================================
+        {
+            "label": "04: データベースをビルド",
+            "type": "shell",
+            "command": "${workspaceFolder}/../mingw64/bin/gcc",
+            "args": [
+                "-g",
+                "-fexec-charset=CP932",
+                "-o",
+                "${workspaceFolder}/projects/04_database/db_app.exe",
+                "${workspaceFolder}/projects/04_database/*.c",
+                "${workspaceFolder}/include/sqlite3.c",
+				"${workspaceFolder}/include/input.c",
+                "-I${workspaceFolder}/include",
+                "-lpthread"
+            ],
+            "group": "build",
+            "problemMatcher": ["$gcc"],
+            "detail": "SQLiteを使用したデータベースアプリ"
+        },
+
+        // ============================================
+        // 05. 図形描画（raylib使用）
+        // ============================================
+        {
+            "label": "05: 図形描画をビルド",
+            "type": "shell",
+            "command": "${workspaceFolder}/../mingw64/bin/gcc",
+            "args": [
+                "-g",
+                "-finput-charset=UTF-8",
+                "-fexec-charset=UTF-8",
+                "-o",
+                "${workspaceFolder}/projects/05_graphics/graphics_app.exe",
+                "${workspaceFolder}/projects/05_graphics/*.c",
+				"${workspaceFolder}/include/input.c",
+                "-I${workspaceFolder}/include",
+                "-L${workspaceFolder}/lib",
+                "-lraylib",
+                "-lopengl32",
+                "-lgdi32",
+                "-lwinmm"
+            ],
+            "group": "build",
+            "problemMatcher": ["$gcc"],
+            "detail": "raylibを使用した図形描画アプリ"
+        },
+
+        // ============================================
+        // 06. 暗号処理（tiny-AES使用）
+        // ============================================
+        {
+            "label": "06: 暗号処理をビルド",
+            "type": "shell",
+            "command": "${workspaceFolder}/../mingw64/bin/gcc",
+            "args": [
+                "-g",
+                "-fexec-charset=CP932",
+                "-o",
+                "${workspaceFolder}/projects/06_crypto/crypto_app.exe",
+                "${workspaceFolder}/projects/06_crypto/*.c",
+                "${workspaceFolder}/include/aes.c",
+				"${workspaceFolder}/include/input.c",
+                "-I${workspaceFolder}/include"
+            ],
+            "group": "build",
+            "problemMatcher": ["$gcc"],
+            "detail": "tiny-AESを使用した暗号処理アプリ"
+        },
+
+        // ============================================
+        // 07. 数学計算（標準ライブラリ使用）
+        // ============================================
+        {
+            "label": "07: 数学計算をビルド",
+            "type": "shell",
+            "command": "${workspaceFolder}/../mingw64/bin/gcc",
+            "args": [
+                "-g",
+                "-fexec-charset=CP932",
+                "-o",
+                "${workspaceFolder}/projects/07_math/math_app.exe",
+                "${workspaceFolder}/projects/07_math/*.c",
+				"${workspaceFolder}/include/input.c",
+                "-I${workspaceFolder}/include",
+                "-lm"
+            ],
+            "group": "build",
+            "problemMatcher": ["$gcc"],
+            "detail": "方程式の解を求める数学計算アプリ"
+        },
+
+        // ============================================
+        // 08. シューティングゲーム（raylib使用）
+        // ============================================
+        {
+            "label": "08: シューティングゲームをビルド",
+            "type": "shell",
+            "command": "${workspaceFolder}/../mingw64/bin/gcc",
+            "args": [
+                "-g",
+                "-fexec-charset=CP932",
+                "-o",
+                "${workspaceFolder}/projects/08_game/game.exe",
+                "${workspaceFolder}/projects/08_game/*.c",
+				"${workspaceFolder}/include/input.c",
+                "-I${workspaceFolder}/include",
+                "-L${workspaceFolder}/lib",
+                "-lraylib",
+                "-lopengl32",
+                "-lgdi32",
+                "-lwinmm"
+            ],
+            "group": "build",
+            "problemMatcher": ["$gcc"],
+            "detail": "raylibを使用したシューティングゲーム"
+        },
+
+        // ============================================
+        // 汎用タスク（ビルド / 実行）
+        // ============================================
+        {
+            "label": "現在のファイルをビルド（シンプル）",
+            "type": "shell",
+            "command": "${workspaceFolder}/../mingw64/bin/gcc",
+            "args": [
+                "-g",
+                "-fexec-charset=CP932",
+                "-DUTF8PROC_STATIC",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}.exe",
+                "${file}",
+				"${workspaceFolder}/include/input.c",
+				"-I${workspaceFolder}/include",
+                "-L${workspaceFolder}/lib",
+                "-lutf8proc"
+            ],
+            "group": "build",
+            "problemMatcher": ["$gcc"],
+            "detail": "開いているCファイルを単体でビルド"
+        },
+        {
+            "label": "現在のフォルダをビルド（シンプル）",
+            "type": "shell",
+            "command": "${workspaceFolder}/../mingw64/bin/gcc",
+            "args": [
+                "-g",
+                "-fexec-charset=CP932",
+                "-DUTF8PROC_STATIC",
+                "-o",
+                "${fileDirname}/app.exe",
+				"${workspaceFolder}/include/input.c",
+   				"-I${workspaceFolder}/include",
+      			"${fileDirname}/*.c",
+                "-L${workspaceFolder}/lib",
+                "-lutf8proc"
+            ],
+            "group": "build",
+            "problemMatcher": ["$gcc"],
+            "detail": "現在のフォルダ内の全.cファイルをビルド（ライブラリなし）"
+        },
+        {
+            "label": "現在のファイルをビルド（raylib付き）",
+            "type": "shell",
+            "command": "${workspaceFolder}/../mingw64/bin/gcc",
+            "args": [
+                "-g",
+                "-fexec-charset=CP932",
+                "-DUTF8PROC_STATIC",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}.exe",
+                "${file}",
+				"${workspaceFolder}/include/input.c",
+                "-I${workspaceFolder}/include",
+                "-L${workspaceFolder}/lib",
+                "-lraylib",
+                "-lopengl32",
+                "-lgdi32",
+                "-lwinmm",
+                "-lutf8proc"
+            ],
+            "group": "build",
+            "problemMatcher": ["$gcc"],
+            "detail": "raylibを使用するファイルをビルド"
+        },
+        {
+            "label": "現在のフォルダをビルド（raylib付き）",
+            "type": "shell",
+            "command": "${workspaceFolder}/../mingw64/bin/gcc",
+            "args": [
+                "-g",
+                "-fexec-charset=CP932",
+                "-DUTF8PROC_STATIC",
+                "-o",
+                "${fileDirname}/app.exe",
+                "${fileDirname}/*.c",
+                "-I${workspaceFolder}/include",
+                "-L${workspaceFolder}/lib",
+                "-lraylib",
+                "-lopengl32",
+                "-lgdi32",
+                "-lwinmm",
+                "-lutf8proc"
+            ],
+            "group": "build",
+            "problemMatcher": ["$gcc"],
+            "detail": "現在のフォルダ内の全.cファイルをビルド（raylib付き）"
+        },
+        {
+            "label": "現在のファイルを実行（シンプル）",
+            "type": "shell",
+            "command": "${fileDirname}/${fileBasenameNoExtension}.exe",
+            "dependsOn": "現在のファイルをビルド（シンプル）",
+            "problemMatcher": [],
+            "detail": "開いているCファイルをビルドして実行"
+        },
+        {
+            "label": "現在のフォルダを実行（シンプル）",
+            "type": "shell",
+            "command": "${fileDirname}/app.exe",
+            "dependsOn": "現在のフォルダをビルド（シンプル）",
+            "problemMatcher": [],
+            "detail": "現在のフォルダをビルドして app.exe を実行"
+        }
+
+    ]
+
+}

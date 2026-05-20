@@ -1,0 +1,22 @@
+{
+    "configurations": [
+        {
+            "name": "Win32-MinGW-Portable",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/include"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE",
+                "UTF8PROC_STATIC"
+            ],
+            "compilerPath": "${workspaceFolder}/../mingw64/bin/gcc.exe",
+            "cStandard": "c23",
+            "cppStandard": "c++23",
+            "intelliSenseMode": "windows-gcc-x64"
+        }
+    ],
+    "version": 4
+}
